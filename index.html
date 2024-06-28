@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Feed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="coffee-cup">
+            <div class="coffee"></div>
+        </div>
+        <p>Brygger din upplevelse...</p>
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/Bilder/feed-logo.png" alt="Café Delights Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#menu">Menyn</a></li>
+                <li><a href="#booking">Boka bord</a></li>
+                <li><a href="#contact">Kontakta oss</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="burger-menu">
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li style="--i:0;"><a href="#home">Hem</a></li>
+                    <li style="--i:1;"><a href="#menu">Menyn</a></li>
+                    <li style="--i:2;"><a href="#booking">Boka bord</a></li>
+                    <li style="--i:3;"><a href="#contact">Kontakta oss</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <video autoplay muted loop id="bgVideo">
+                <source src="/video/Coffee Bean Footage Video in 4K.webm" type="video/webm">
+            </video>
+            <div class="content">
+                <h1 class="animated-title">Välkommen till Café Feed</h1>
+                <a href="#menu" class="cta-button">Titta in på menyn!</a>
+            </div>
+            <div class="diagonal-video-container">
+                <video autoplay muted loop class="diagonal-video">
+                  <source src="/video/Jordgubben.mp4" type="video/mp4">
+                </video>
+        </section>
+
+        
+
+        <section id="menu">
+            <h2>Vår Meny</h2>
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Alla</button>
+                <button class="category-btn" data-category="daily">Dagens Lunch</button>
+                <button class="category-btn" data-category="food">Mat</button>
+                <button class="category-btn" data-category="coffee">Kaffe</button>
+                <button class="category-btn" data-category="dessert">Efterrätt</button>
+            </div>
+            <div class="menu-container">
+                <div id="daily-lunch" class="menu-section">
+                    <h3>Dagens Lunch</h3>
+                    <div class="menu-items"></div>
+                </div>
+                <div id="food" class="menu-section">
+                    <h3>Mat</h3>
+                    <div class="menu-items"></div>
+                </div>
+                <div id="coffee" class="menu-section">
+                    <h3>Kaffe</h3>
+                    <div class="menu-items"></div>
+                </div>
+                <div id="dessert" class="menu-section">
+                    <h3>Efterrätt</h3>
+                    <div class="menu-items"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="opening-hours">
+            <div class="container">
+                <h2 class="section-title">Öppettider & Hitta oss</h2>
+                <div class="opening-hours-map-wrapper">
+                    <div class="opening-hours-container">
+                        <h3>Våra öppettider</h3>
+                        <ul class="hours-list">
+                            <li><span class="day">Måndag - Fredag:</span> <span class="time">07:00 - 20:00</span></li>
+                            <li><span class="day">Lördag:</span> <span class="time">09:00 - 22:00</span></li>
+                            <li><span class="day">Söndag:</span> <span class="time">10:00 - 18:00</span></li>
+                        </ul>
+                        <p class="address">Köpenhamnsvägen 5B, 217 43 Malmö</p>
+                        <a href="tel:+46701234567" class="phone-number">070-123 45 67</a>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18035.883635512793!2d12.98576863684346!3d55.59356445768584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4653a152bb3541b5%3A0xe6af70463425c81b!2zS8O2cGVuaGFtbnN2w6RnZW4gNUIsIDIxNyA0MyBNYWxtw7Y!5e0!3m2!1ssv!2sse!4v1719583165851!5m2!1ssv!2sse" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="booking">
+            <h2>Boka Ett Bord</h2>
+            <form id="booking-form">
+                <input type="text" name="name" placeholder="Ditt Namn" required>
+                <input type="email" name="email" placeholder="Din E-post" required>
+                <input type="tel" name="phone" placeholder="Ditt Telefonnummer" required>
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <input type="number" name="guests" placeholder="Antal Gäster" min="1" max="10" required>
+                <textarea name="special-requests" placeholder="Speciella Önskemål (valfritt)"></textarea>
+                <div id="table-preview"></div>
+                <button type="submit">Boka Nu</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakta Oss</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Köpenhamnsvägen 5B, 217 43 Malmö</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>070-123 45 67</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@cafefeed.se</p>
+                </div>
+            </div>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Ditt Namn" required>
+                <input type="email" name="email" placeholder="Din E-post" required>
+                <textarea name="message" placeholder="Ditt Meddelande" required></textarea>
+                <button type="submit">Skicka Meddelande</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Om Oss</h4>
+                <p>Cafe Feed är engagerade i att erbjuda en oöverträffad kaffeupplevelse.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Snabblänkar</h4>
+                <ul>
+                    <li><a href="#home">Hem</a></li>
+                    <li><a href="#menu">Menyn</a></li>
+                    <li><a href="#booking">Boka Ett Bord</a></li>
+                    <li><a href="#contact">Kontakta Oss</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Nyhetsbrev</h4>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Ange din e-post" required>
+                    <button type="submit">Prenumerera</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span class="year"></span> Cafe Feed. Alla rättigheter förbehållna.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/cafefeed" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/cafefeed/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@cafefeed__?lang=sv-SE" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chat-widget" class="chat-closed">
+        <div class="chat-header">
+            <h4>Livechatt</h4>
+            <button id="close-chat">×</button>
+        </div>
+        <div class="chat-body">
+            <!-- Chat messages will appear here -->
+        </div>
+        <form id="chat-form">
+            <input type="text" placeholder="Skriv ditt meddelande..." required>
+            <button type="submit">Skicka</button>
+        </form>
+    </div>
+
+    <button id="open-chat">Chatta med oss</button>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.6/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+</body>
+</html>
